@@ -67,6 +67,28 @@ li{
     padding-left:6px;
 }
 
+.arrow-left img, .arrow-right img{
+    width: 65px;
+    height: auto;
+}
+
+.arrow-left, .arrow-right{
+    height: auto;
+    position: absolute;
+    cursor: pointer;
+    display: inline-block;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.arrow-right{
+    right: 30px;
+}
+
+.arrow-left{
+    left: 30px;
+}
+
 /* header */
 
 #header-site{
@@ -204,7 +226,7 @@ li{
     position: fixed;
     width: 100%;
     bottom: 0;
-    padding: 10px 15px;
+    padding: 4px 15px;
     background-color: #ffffff;
 }
 
@@ -259,7 +281,7 @@ li{
 @media (max-width: 576px) {
 
     html{
-        font-size: 60%;
+        font-size: 70%;
     }
 
     #nav-icon3 {
@@ -305,6 +327,10 @@ li{
 
     .subnav-footer ul li {
         width: 220px;
+    }
+
+    .arrow-left img, .arrow-right img{
+        width: 50px;
     }
 
 }

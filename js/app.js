@@ -12,7 +12,7 @@ $(function() {
     $('.owl-carousel').owlCarousel({
         loop:false,
         margin:10,
-        nav:false,
+        nav:true,
         responsive:{
             0:{
                 items:1
@@ -24,6 +24,11 @@ $(function() {
                 items:5
             }
         }
-    })
+    });
+
+    // modal click menu
+    function test1() {
+        
+    }
 
 });
