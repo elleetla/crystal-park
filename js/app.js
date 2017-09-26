@@ -1,10 +1,10 @@
-// js
+// jQuery
 $(function() {
 
     // nav burger
     $(".nav-burger").click(function(){
-        $("#modal-burger").fadeToggle(400);
-        $(".nav-modal-burger li").fadeIn(100);
+        $("#modal-burger").fadeToggle(500);
+        $(".nav-modal-burger li").fadeIn(500);
         $('#nav-icon3').toggleClass('open');
     });
 
@@ -12,7 +12,7 @@ $(function() {
     $('.owl-carousel').owlCarousel({
         loop:false,
         margin:10,
-        nav:true,
+        nav:false,
         responsive:{
             0:{
                 items:1
@@ -26,13 +26,18 @@ $(function() {
         }
     });
 
-    // modal click menu
-
 });
 
+// ecmascript
+
+// modal click menu
 var modalOne = document.getElementById("modal-one");
-var closeModalOne = document.querySelector(".close-modal-one");
+var closeModalOne = document.getElementById("close-modal-one");
 
 function clickModalOne() {
     modalOne.style.display = 'block';
 }
+
+closeModalOne.addEventListener('click', function () {
+    modalOne.style.display = 'none';
+});

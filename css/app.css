@@ -7,6 +7,14 @@ html{
 }
 
 body{
+    background: url('../assets/bg-motif-home.png') #ffffff no-repeat center;
+    background-size: cover;
+    height: 100%;
+    font-size: 1.000em; /* équivalent à 16px */
+    color: #2A4156;
+}
+
+.page-detail{
     background: url('../assets/bg-detail.jpg') no-repeat center;
     background-size: cover;
     height: 100%;
@@ -78,7 +86,7 @@ li{
     cursor: pointer;
     display: inline-block;
     top: 50%;
-    transform: translate(0, -50%);
+    transform: translate(0, -100%);
 }
 
 .arrow-right{
@@ -246,7 +254,7 @@ li{
 }
 
 .subnav-footer ul a {
-    padding: 20px 18px;
+    padding: 18px 18px;
     color: #71523D;
     text-transform: uppercase;
     border: 1px solid #D8D8D8;
@@ -259,7 +267,30 @@ li{
 .subnav-footer ul li a:hover{
     background-color: #C4B3A2;
     border: 1px solid #C4B3A2;
-    color: #ffffff;
+    color: #ffffff !important;
+}
+
+/* page home */
+
+#logo-page-home img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#logo-page-home {
+    text-align: center;
+}
+
+.description p {
+    margin-bottom: 0;
+}
+
+#logo-page-home{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* modal */

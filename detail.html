@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/app.css">
 </head>
-<body>
+<body class="page-detail">
 
     <a class="arrow-left"><img src="assets/arrow-left.png"></a>
     <a class="arrow-right"><img src="assets/arrow-right.png"></a>
@@ -17,7 +17,7 @@
         <ul class="nav-modal-burger">
             <li><a href="#">Localisation</a></li>
             <li><a href="#">Visites Virtuelles</a></li>
-            <li><a href="#">Space Planning</a></li>
+            <li><a href="#">Les Bureaux</a></li>
             <li><a href="#">Perspectives</a></li>
             <li><a href="#">Médias</a></li>
         </ul>
@@ -28,7 +28,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div id="logo-site">
-                        <a href="detail.html">
+                        <a href="index.html">
                             <img src="assets/logo.png" alt="Logo Crystal Park" title="Logo Crystal Park">
                         </a>
                     </div>
@@ -51,11 +51,13 @@
                 <div class="col-lg-12">
                     <nav class="subnav-footer">
                         <ul class="owl-carousel owl-theme">
-                            <li class="item"><a onclick="clickModalOne();" href="#">Espace d'accueil</a></li>
-                            <li class="item"><a href="#">Espace VIP</a></li>
-                            <li class="item"><a href="#">Espace Zen</a></li>
-                            <li class="item"><a href="#">Rie Caféteria</a></li>
-                            <li class="item"><a href="#">Terrasse</a></li>
+                            <li class="item"><a onclick="clickModalOne();">Accueil - Salon</a></li>
+                            <li class="item"><a>Business Lounge</a></li>
+                            <li class="item"><a>Espace Forme</a></li>
+                            <li class="item"><a>Crystal Club - RIE</a></li>
+                            <li class="item"><a>Terrasse</a></li>
+                            <li class="item"><a>Jardin</a></li>
+                            <li class="item"><a>Parc</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -65,7 +67,7 @@
 
     <div id="modal-one" class="modal-style">
         test modal 1
-        <a onclick="closeModalOne();">close</a>
+        <a id="close-modal-one">close</a>
     </div>
 
     <!-- include script -->
