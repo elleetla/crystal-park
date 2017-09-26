@@ -3,6 +3,7 @@
 html{
     height: 100%;
     background-color: #C4B3A2;
+    font-size: 100%;
 }
 
 body{
@@ -10,6 +11,7 @@ body{
     background-size: cover;
     height: 100%;
     padding-bottom: 94px;
+    font-size: 1.000em; /* équivalent à 16px */
 }
 
 /* general */
@@ -40,9 +42,9 @@ li{
     display: none;
     background-image: url(../assets/motif-navburger.png);
     z-index: 2;
-    background-size: 70%;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: right bottom;
+    background-position: center;
 }
 
 .nav-modal-burger {
@@ -56,7 +58,7 @@ li{
 .nav-modal-burger li a{
     color: #ffffff;
     font-size: 1.750em;
-    padding: 12px 0;
+    padding: 18px 0;
     display: inline-block;
     letter-spacing: 2px;
 }
@@ -64,19 +66,19 @@ li{
 /* header */
 
 #header-site{
-    padding: 30px 15px;
+    padding: 30px 15px 210px 15px;
     position: relative;
     z-index: 3;
-    background: -moz-linear-gradient(top, rgba(97,83,63,0.85) 0%, rgba(255,255,255,0) 50%);
-    background: -webkit-linear-gradient(top, rgba(97,83,63,0.85) 0%,rgba(255,255,255,0) 50%);
-    background: linear-gradient(to bottom, rgba(97,83,63,0.85) 0%,rgba(255,255,255,0) 50%);
+    background: -moz-linear-gradient(top, rgba(97,83,63,0.55) 0%, rgba(255,255,255,0) 50%);
+    background: -webkit-linear-gradient(top, rgba(97,83,63,0.55) 0%,rgba(255,255,255,0) 50%);
+    background: linear-gradient(to bottom, rgba(97,83,63,0.55) 0%,rgba(255,255,255,0) 50%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61533f', endColorstr='#00ffffff',GradientType=0 )
 }
 
 .nav-burger {
     position: absolute;
     right: 14px;
-    top: -9px;
+    top: -11px;
     cursor: pointer;
     padding: 15px 20px;
     background-color: #ffffff;
@@ -107,7 +109,7 @@ li{
 /* Icon 3 */
 
 #nav-icon3{
-    width: 25px;
+    width: 23px;
     height: 16px;
     position: relative;
     -webkit-transform: rotate(0deg);
@@ -124,10 +126,10 @@ li{
 #nav-icon3 span{
     display: block;
     position: absolute;
-    height: 3px;
+    height: 4px;
     width: 100%;
     background: #71523D;
-    border-radius: 9px;
+    border-radius: 80px;
     opacity: 1;
     left: 0;
     -webkit-transform: rotate(0deg);
@@ -235,4 +237,57 @@ li{
     background-color: #C4B3A2;
     border: 1px solid #C4B3A2;
     color: #ffffff;
+}
+
+/*
+    Media queries
+----------------------------------------------*/
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+
+    html{
+        font-size: 60%;
+    }
+
+    #nav-icon3 {
+        width: 20px;
+        height: 15px;
+    }
+
+    .nav-burger {
+        position: absolute;
+        right: 15px;
+        top: -10px;
+        padding: 11px 14px;
+    }
+
+    #logo-site img {
+        width: 160px;
+        height: auto;
+    }
+
+    #nav-icon3 span {
+        height: 3px;
+    }
+
+    #nav-icon3 span:nth-child(2), #nav-icon3 span:nth-child(3) {
+        top: 6px;
+    }
+
+    #nav-icon3 span:nth-child(4) {
+        top: 12px;
+    }
+
 }
