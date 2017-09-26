@@ -40,4 +40,5 @@ function clickModalOne() {
 
 closeModalOne.addEventListener('click', function () {
     modalOne.style.display = 'none';
+    alert('test');
 });
