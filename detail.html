@@ -51,7 +51,7 @@
                 <div class="col-lg-12">
                     <nav class="subnav-footer">
                         <ul class="owl-carousel owl-theme">
-                            <li class="item"><a href="#">Espace d'accueil</a></li>
+                            <li class="item"><a onclick="clickModalOne();" href="#">Espace d'accueil</a></li>
                             <li class="item"><a href="#">Espace VIP</a></li>
                             <li class="item"><a href="#">Espace Zen</a></li>
                             <li class="item"><a href="#">Rie Caféteria</a></li>
@@ -62,6 +62,11 @@
             </div>
         </div>
     </footer>
+
+    <div id="modal-one" class="modal-style">
+        test modal 1
+        <a onclick="closeModalOne();">close</a>
+    </div>
 
     <!-- include script -->
     <script src="js/jquery-3.2.1.min.js"></script>

@@ -27,8 +27,12 @@ $(function() {
     });
 
     // modal click menu
-    function test1() {
-        
-    }
 
 });
+
+var modalOne = document.getElementById("modal-one");
+var closeModalOne = document.querySelector(".close-modal-one");
+
+function clickModalOne() {
+    modalOne.style.display = 'block';
+}

@@ -262,6 +262,22 @@ li{
     color: #ffffff;
 }
 
+/* modal */
+
+.modal-style{
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+}
+
+#modal-one{
+    display: none;
+}
+
 /*
     Media queries
 ----------------------------------------------*/
