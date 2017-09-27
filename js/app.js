@@ -20,14 +20,31 @@ $(function() {
             600:{
                 items:3
             },
+            800:{
+                items:4
+            },
             1000:{
-                items:5
+                items:8
             }
         }
     });
 
-    $(".contact-list").click(function() {
+    $(".sub-one").click(function() {
         $('#subnav-footer-one').slideToggle("slow");
+        $('#subnav-footer-two').hide();
+        $('#subnav-footer-three').hide();
+    });
+
+    $(".sub-two").click(function() {
+        $('#subnav-footer-two').slideToggle("slow");
+        $('#subnav-footer-one').hide();
+        $('#subnav-footer-three').hide();
+    });
+
+    $(".sub-three").click(function() {
+        $('#subnav-footer-three').slideToggle("slow");
+        $('#subnav-footer-two').hide();
+        $('#subnav-footer-one').hide();
     });
 
 });

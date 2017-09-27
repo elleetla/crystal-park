@@ -256,7 +256,6 @@ li{
 
 .subnav-footer{
     text-align: center;
-    padding-left: 10%;
 }
 
 .subnav-footer ul{
@@ -266,7 +265,7 @@ li{
 
 .subnav-footer ul li{
     display: inline-block;
-    padding: 16px 5px;
+    padding: 16px 0px;
     width: 100%;
 }
 
@@ -279,7 +278,7 @@ li{
     letter-spacing: 1px;
     display: block;
     cursor: pointer;
-    font-size: 0.688em;
+    font-size: 0.588em;
 }
 
 .subnav-footer ul li a:hover{
@@ -294,7 +293,7 @@ li{
 
 .subnav-footer-hover {
     width: 100%;
-    background-color: #71523D;
+    background-color: #C4B3A2;
     text-align: center;
     padding: 16px 15px;
 }
@@ -313,10 +312,10 @@ li{
     letter-spacing: 1px;
     cursor: pointer;
     display: block;
-    font-size: 0.688em;
+    font-size: 0.588em;
 }
 
-#subnav-footer-one{
+#subnav-footer-one, #subnav-footer-two, #subnav-footer-three{
     display: none;
 }
 
@@ -410,6 +409,14 @@ li{
     Media queries
 ----------------------------------------------*/
 
+@media (max-width: 1300px){
+
+    .subnav-footer ul a {
+        padding: 18px 5px;
+    }
+
+}
+
 @media (max-width: 1200px) {
 
 }
@@ -482,5 +489,17 @@ li{
         padding-left: 0;
     }
 
+    .subnav-footer-hover li a {
+        padding: 18px 14px;
+    }
+
+    .subnav-footer-hover li {
+        display: inline-block;
+        padding: 0 4px;
+    }
+
+    .subnav-footer-hover {
+        padding: 16px 8px;
+    }
 
 }
