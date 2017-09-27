@@ -22,6 +22,22 @@ body{
     font-size: 1.000em; /* équivalent à 16px */
 }
 
+.page-test1{
+    background: url('../assets/test1.jpg') no-repeat center;
+    background-size: cover;
+    height: 100%;
+    padding-bottom: 94px;
+    font-size: 1.000em; /* équivalent à 16px */
+}
+
+.page-test2{
+    background: url('../assets/test2.jpg') no-repeat center;
+    background-size: cover;
+    height: 100%;
+    padding-bottom: 94px;
+    font-size: 1.000em; /* équivalent à 16px */
+}
+
 /* general */
 
 a, a:hover, a:active, a:focus{
@@ -103,9 +119,9 @@ li{
     padding: 30px 15px;
     position: relative;
     z-index: 3;
-    background: -moz-linear-gradient(top, rgba(97,83,63,0.55) 0%, rgba(255,255,255,0) 50%);
-    background: -webkit-linear-gradient(top, rgba(97,83,63,0.55) 0%,rgba(255,255,255,0) 50%);
-    background: linear-gradient(to bottom, rgba(97,83,63,0.55) 0%,rgba(255,255,255,0) 50%);
+    background: -moz-linear-gradient(top, rgba(97,83,63,0.55) 0%, rgba(255,255,255,0) 85%);
+    background: -webkit-linear-gradient(top, rgba(97,83,63,0.55) 0%,rgba(255,255,255,0) 85%);
+    background: linear-gradient(to bottom, rgba(97,83,63,0.55) 0%,rgba(255,255,255,0) 85%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61533f', endColorstr='#00ffffff',GradientType=0 )
 }
 
@@ -134,7 +150,7 @@ li{
 .nav-burger span {
     height: 2px;
     border-radius: 100px;
-    background-color: #71523D;
+    background-color: #96846D;
     display: block;
     margin-bottom: 4px;
     width: 20px;
@@ -160,7 +176,7 @@ li{
 #nav-icon3 span{
     display: block;
     position: absolute;
-    height: 4px;
+    height: 3px;
     width: 100%;
     background: #71523D;
     border-radius: 80px;
@@ -234,7 +250,6 @@ li{
     position: fixed;
     width: 100%;
     bottom: 0;
-    padding: 4px 15px;
     background-color: #ffffff;
 }
 
@@ -249,7 +264,7 @@ li{
 
 .subnav-footer ul li{
     display: inline-block;
-    padding: 12px;
+    padding: 16px 5px;
     width: 100%;
 }
 
@@ -259,8 +274,9 @@ li{
     text-transform: uppercase;
     border: 1px solid #D8D8D8;
     border-radius: 100px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     display: block;
+    cursor: pointer;
     font-size: 0.688em;
 }
 
@@ -268,6 +284,40 @@ li{
     background-color: #C4B3A2;
     border: 1px solid #C4B3A2;
     color: #ffffff !important;
+}
+
+.subnav-footer ul li a:focus{
+    background-color: #C4B3A2;
+}
+
+.subnav-footer-hover {
+    width: 100%;
+    background-color: #71523D;
+    text-align: center;
+    padding: 16px 15px;
+    display: block;
+}
+
+.subnav-footer-hover li{
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.subnav-footer-hover li a{
+    padding: 18px 18px;
+    color: #ffffff;
+    text-transform: uppercase;
+    border: 1px solid #ffffff;
+    border-radius: 100px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: block;
+    font-size: 0.688em;
+}
+
+.subnav-footer-hover li a:hover{
+    background-color: #ffffff;
+    color: #71523D;
 }
 
 /* page home */
@@ -284,6 +334,48 @@ li{
 
 .description p {
     margin-bottom: 0;
+}
+
+.content-top{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.content-bottom{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    left:0;
+}
+
+.bloc1{
+    position: absolute;
+    left: 50%;
+    right: 0;
+    bottom: 26%;
+    height: 250px;
+    transform: translate(-50%, 0);
+    width: 250px;
+    background-color: #dddddd;
+    background: url(../assets/visites-virtuelles.png) no-repeat center;
+    background-size: cover;
+    border-radius: 200px;
+}
+
+.bloc2 {
+    position: absolute;
+    left: 50%;
+    right: 0;
+    bottom: 4%;
+    height: 250px;
+    width: 250px;
+    background-color: #dddddd;
+    border-radius: 200px;
+    transform: translate(-180%, 0);
 }
 
 #logo-page-home{
@@ -323,13 +415,13 @@ li{
 
 @media (max-width: 768px) {
 
+    html{
+        font-size: 80%;
+    }
+
 }
 
 @media (max-width: 576px) {
-
-    html{
-        font-size: 70%;
-    }
 
     #nav-icon3 {
         width: 20px;

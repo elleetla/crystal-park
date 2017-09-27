@@ -27,18 +27,3 @@ $(function() {
     });
 
 });
-
-// ecmascript
-
-// modal click menu
-var modalOne = document.getElementById("modal-one");
-var closeModalOne = document.getElementById("close-modal-one");
-
-function clickModalOne() {
-    modalOne.style.display = 'block';
-}
-
-closeModalOne.addEventListener('click', function () {
-    modalOne.style.display = 'none';
-    alert('test');
-});
