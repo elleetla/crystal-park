@@ -26,4 +26,8 @@ $(function() {
         }
     });
 
+    $(".contact-list").click(function() {
+        $('#subnav-footer-one').slideToggle("slow");
+    });
+
 });

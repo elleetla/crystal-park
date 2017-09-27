@@ -92,8 +92,9 @@ li{
 }
 
 .arrow-left img, .arrow-right img{
-    width: 65px;
+    width: 60px;
     height: auto;
+    opacity: 0.8;
 }
 
 .arrow-left, .arrow-right{
@@ -255,6 +256,7 @@ li{
 
 .subnav-footer{
     text-align: center;
+    padding-left: 10%;
 }
 
 .subnav-footer ul{
@@ -295,7 +297,6 @@ li{
     background-color: #71523D;
     text-align: center;
     padding: 16px 15px;
-    display: block;
 }
 
 .subnav-footer-hover li{
@@ -313,6 +314,10 @@ li{
     cursor: pointer;
     display: block;
     font-size: 0.688em;
+}
+
+#subnav-footer-one{
+    display: none;
 }
 
 .subnav-footer-hover li a:hover{
@@ -471,5 +476,11 @@ li{
     .arrow-left img, .arrow-right img{
         width: 50px;
     }
+
+    .subnav-footer{
+        text-align: center;
+        padding-left: 0;
+    }
+
 
 }
