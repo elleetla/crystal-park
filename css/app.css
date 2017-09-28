@@ -408,7 +408,7 @@ li{
     left:0;
 }
 
-#bloc1, #bloc2{
+#bloc1, #bloc2, #bloc3, #bloc4, #bloc5{
     height: 17vw;
     width: 25vw;
     border-radius: 60%;
@@ -417,14 +417,14 @@ li{
     background-size: cover;
     position: absolute;
     overflow: hidden;
+    background-position: center;
 }
 
 #bloc1{
     left: 50%;
     right: 0;
-    bottom: 16%;
+    bottom: 20%;
     box-shadow: 4px -11px white, 5px -12px #cfcfcf;
-    background-position: center;
     -ms-transform: rotate(7deg) translate(-50%, 0%); /* IE 9 */
     -webkit-transform: rotate(7deg) translate(-50%, 0%); /* Chrome, Safari, Opera */
     transform: rotate(7deg) translate(-50%, 0%);
@@ -433,11 +433,38 @@ li{
 #bloc2{
     bottom: 10%;
     left: 22%;
+    box-shadow: 4px -11px white, 5px -12px #cfcfcf;
     -ms-transform: rotate(-28deg) translate(-50%, 0%); /* IE 9 */
     -webkit-transform: rotate(-28deg) translate(-50%, 0%); /* Chrome, Safari, Opera */
     transform: rotate(-28deg) translate(-50%, 0%);
 }
 
+#bloc3{
+    bottom: 10%;
+    right: 22%;
+    box-shadow: 4px -11px white, 5px -12px #cfcfcf;
+    -ms-transform: rotate(28deg) translate(50%, 0%); /* IE 9 */
+    -webkit-transform: rotate(28deg) translate(50%, 0%); /* Chrome, Safari, Opera */
+    transform: rotate(28deg) translate(50%, 0%);
+}
+
+#bloc4{
+    top: 10%;
+    left: 11%;
+    box-shadow: 4px -11px white, 5px -12px #cfcfcf;
+    -ms-transform: rotate(12deg) translate(50%, 0%); /* IE 9 */
+    -webkit-transform: rotate(12deg) translate(50%, 0%); /* Chrome, Safari, Opera */
+    transform: rotate(12deg) translate(50%, 0%);
+}
+
+#bloc5{
+    top: 10%;
+    right:11%;
+    box-shadow: 4px -11px white, 5px -12px #cfcfcf;
+    -ms-transform: rotate(12deg) translate(50%, 0%); /* IE 9 */
+    -webkit-transform: rotate(12deg) translate(50%, 0%); /* Chrome, Safari, Opera */
+    transform: rotate(-12deg) translate(-50%);
+}
 
 #bloc1:before
 {
@@ -464,13 +491,89 @@ li{
     height: 115%;
     overflow: hidden;
     z-index: -1;
-    background: url(../assets/bg-les-bureaux.jpg) 0 0 repeat;
+    background: url(../assets/bg-les-services.jpg) 0 0 repeat;
     -webkit-transform: rotate(28deg);
     -moz-transform: rotate(28deg);
     -ms-transform: rotate(28deg);
     -o-transform: rotate(28deg);
     transform: rotate(28deg);
     background-size: cover;
+}
+
+#bloc3:before
+{
+    content: "";
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    overflow: hidden;
+    z-index: -1;
+    background: url(../assets/bg-les-services.jpg) 0 0 repeat;
+    -webkit-transform: rotate(-28deg);
+    -moz-transform: rotate(-28deg);
+    -ms-transform: rotate(-28deg);
+    -o-transform: rotate(-28deg);
+    transform: rotate(-28deg);
+    background-size: cover;
+}
+
+#bloc4:before
+{
+    content: "";
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    overflow: hidden;
+    z-index: -1;
+    background: url(../assets/bg-les-services.jpg) 0 0 repeat;
+    -webkit-transform: rotate(-28deg);
+    -moz-transform: rotate(-28deg);
+    -ms-transform: rotate(-28deg);
+    -o-transform: rotate(-28deg);
+    transform: rotate(-28deg);
+    background-size: cover;
+}
+
+.title-bloc {
+    height: 100%;
+    background: rgba(164,146,128,0.6);
+    color: #ffffff;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.1vw;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 100%;
+    padding-top: 32%;
+}
+
+.title-bloc{
+    transition: all 0.30s ease-in-out 0s;
+    -webkit-transition: all 0.30s ease-in-out 0s;
+    -moz-transition: all 0.30s ease-in-out 0s;
+    -o-transition: all 0.30s ease-in-out 0s;
+}
+
+#bloc1 .title-bloc{
+    transform: rotate(-7deg);
+    margin: 0 auto;
+}
+
+#bloc2 .title-bloc{
+    transform: rotate(28deg);
+}
+
+#bloc3 .title-bloc{
+    transform: rotate(-28deg);
+}
+
+.bloc-home:hover .title-bloc{
+    background: #A49280;
+    transition: all 0.30s ease-in-out 0s;
+    -webkit-transition: all 0.30s ease-in-out 0s;
+    -moz-transition: all 0.30s ease-in-out 0s;
+    -o-transition: all 0.30s ease-in-out 0s;
 }
 
 #logo-page-home{
