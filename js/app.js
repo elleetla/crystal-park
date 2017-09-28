@@ -8,7 +8,24 @@ $('document').ready(function() {
         $('#nav-icon3').toggleClass('open');
     });
 
-    // Slider carousel nav footer
+    // Slider carousels nav footer
+    $('.owl-carousel-one').owlCarousel({
+        loop:false,
+        margin:10,
+        nav:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:8
+            }
+        }
+    });
+
     $('.owl-carousel').owlCarousel({
         loop:false,
         margin:10,
