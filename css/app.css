@@ -47,8 +47,9 @@ html{
 body{
     background: url('../assets/bg-motif-home.png') #ffffff no-repeat center;
     background-size: cover;
-    font-family: "GTWalsheimProRegular", Helvetica Neue, Arial, sans-serif;
+    font-family: "GTWalsheimProLight", Helvetica Neue, Arial, sans-serif;
     height: 100%;
+    overflow: hidden;
     font-size: 1.000em; /* équivalent à 16px */
     color: #2A4156;
 }
@@ -57,6 +58,7 @@ body{
     background: url('../assets/bg-les-bureaux.jpg') no-repeat center;
     background-size: cover;
     height: 100%;
+    overflow: inherit;
     padding-bottom: 94px;
     font-size: 1.000em; /* équivalent à 16px */
 }
@@ -65,6 +67,7 @@ body{
     background: url('../assets/bg-les-services.jpg') no-repeat center;
     background-size: cover;
     height: 100%;
+    overflow: inherit;
     padding-bottom: 94px;
     font-size: 1.000em; /* équivalent à 16px */
 }
@@ -73,8 +76,13 @@ body{
     background: url('../assets/bg-localisation.jpg') no-repeat center;
     background-size: cover;
     height: 100%;
+    overflow: inherit;
     padding-bottom: 94px;
     font-size: 1.000em; /* équivalent à 16px */
+}
+
+.perspectives{
+    overflow: inherit;
 }
 
 /* general */
@@ -379,7 +387,7 @@ li{
 #logo-page-home img {
     width: 20vw;
     height: auto;
-    margin-bottom: 5%;
+    margin-bottom: 4%;
 }
 
 #logo-page-home {
@@ -388,7 +396,7 @@ li{
 
 .description p {
     margin-bottom: 0;
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     line-height: 1.3;
 }
 
@@ -418,6 +426,7 @@ li{
     position: absolute;
     overflow: hidden;
     background-position: center;
+    font-family: "GTWalsheimProRegular", Helvetica Neue, Arial, sans-serif;
 }
 
 #bloc1{
@@ -525,12 +534,29 @@ li{
     height: 115%;
     overflow: hidden;
     z-index: -1;
+    background: url(../assets/bg-localisation.jpg) 0 0 repeat;
+    -webkit-transform: rotate(-12deg);
+    -moz-transform: rotate(-12deg);
+    -ms-transform: rotate(-12deg);
+    -o-transform: rotate(-12deg);
+    transform: rotate(-12deg);
+    background-size: cover;
+}
+
+#bloc5:before
+{
+    content: "";
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    overflow: hidden;
+    z-index: -1;
     background: url(../assets/bg-les-services.jpg) 0 0 repeat;
-    -webkit-transform: rotate(-28deg);
-    -moz-transform: rotate(-28deg);
-    -ms-transform: rotate(-28deg);
-    -o-transform: rotate(-28deg);
-    transform: rotate(-28deg);
+    -webkit-transform: rotate(12deg);
+    -moz-transform: rotate(12deg);
+    -ms-transform: rotate(12deg);
+    -o-transform: rotate(12deg);
+    transform: rotate(12deg);
     background-size: cover;
 }
 
@@ -546,6 +572,7 @@ li{
     letter-spacing: 2px;
     width: 100%;
     padding-top: 32%;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
 .title-bloc{
@@ -566,6 +593,14 @@ li{
 
 #bloc3 .title-bloc{
     transform: rotate(-28deg);
+}
+
+#bloc4 .title-bloc{
+    transform: rotate(-12deg);
+}
+
+#bloc5 .title-bloc{
+    transform: rotate(12deg);
 }
 
 .bloc-home:hover .title-bloc{
