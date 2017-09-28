@@ -419,7 +419,7 @@ li{
     border-radius: 60%;
     background-color: #dddddd;
     position: absolute;
-    width: 25vw;
+    width: 24vw;
     height: 17vw;
     overflow: hidden;
     font-size: 1.2vw;
@@ -427,18 +427,55 @@ li{
     letter-spacing: 3px;
     display: inline-block;
     font-family: "GTWalsheimProRegular", Helvetica Neue, Arial, sans-serif;
-    box-shadow: 4px -11px white, 5px -13px #CFCFCF;
+    box-shadow: 4px -11px white, 4px -12px #CFCFCF;
     text-shadow: 1px 2px 6px rgba(0,0,0,0.2);
 }
 
-#bloc2{
-    -moz-transform: rotate(-28deg);
-    -webkit-transform: rotate(-28deg);
-    transform: rotate(-28deg);
-    background-image: url("../assets/bg-les-bureaux.jpg");
-    bottom: 0%;
-    left: 10%;
+#bloc1{
+    -moz-transform: rotate(-18deg);
+    -webkit-transform: rotate(-18deg);
+    transform: rotate(-18deg);
+    background-image: url("../assets/bg-localisation.jpg");
+    bottom: -14%;
+    left: 12%;
 }
+
+#bloc2{
+    -moz-transform: rotate(10deg) translate(-50%);
+    -webkit-transform: rotate(10deg) translate(-50%);
+    transform: rotate(10deg) translate(-50%);
+    background-image: url(../assets/bg-les-services.jpg);
+    bottom: 18%;
+    left: 50%;
+}
+
+#bloc3{
+    -moz-transform: rotate(18deg);
+    -webkit-transform: rotate(18deg);
+    transform: rotate(18deg);
+    background-image: url("../assets/bg-les-bureaux.jpg");
+    bottom: -14%;
+    right: 12%;
+}
+
+#bloc4{
+    -moz-transform: rotate(14deg);
+    -webkit-transform: rotate(14deg);
+    transform: rotate(14deg);
+    background-image: url("../assets/bg-les-bureaux.jpg");
+    top: 22%;
+    left: 24%;
+}
+
+#bloc5{
+    -moz-transform: rotate(-14deg);
+    -webkit-transform: rotate(-14deg);
+    transform: rotate(-14deg);
+    background-image: url("../assets/bg-les-bureaux.jpg");
+    top: 22%;
+    right: 24%;
+}
+
 .inner{
     display: inline-block;
     position: absolute;
@@ -450,11 +487,31 @@ li{
     padding-top: 32%;
     height: 100%;
     color: #FFF;
-    background: rgba(164,146,128,0.7);
+    background: rgba(164,146,128,0.6);
 }
 
-.inner span{
-    transform: rotate(28deg);
+#bloc1 .inner span{
+    transform: rotate(18deg);
+    display: inline-block;
+}
+
+#bloc2 .inner span{
+    transform: rotate(-10deg);
+    display: inline-block;
+}
+
+#bloc3 .inner span{
+    transform: rotate(-18deg);
+    display: inline-block;
+}
+
+#bloc4 .inner span{
+    transform: rotate(-14deg);
+    display: inline-block;
+}
+
+#bloc5 .inner span{
+    transform: rotate(14deg);
     display: inline-block;
 }
 
@@ -465,7 +522,7 @@ li{
 }
 
 .inner:hover {
-    background-color: #A49280;
+    background-color: rgba(164,146,128,0.9);
 }
 
 #logo-page-home{
