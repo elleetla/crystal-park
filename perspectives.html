@@ -10,9 +10,6 @@
 </head>
 <body class="perspectives">
 
-    <a class="arrow-left"><img src="assets/arrow-left.png"></a>
-    <a class="arrow-right"><img src="assets/arrow-right.png"></a>
-
     <div id="modal-burger">
         <ul class="nav-modal-burger">
             <li><a href="localisation.html">Localisation</a></li>
@@ -45,23 +42,25 @@
         </div>
     </header>
 
-    <!--<footer id="footer-site">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <nav class="subnav-footer">
-                        <ul class="owl-carousel owl-theme">
-                            <li class="item"><a>Situation</a></li>
-                            <li class="item"><a>Plan masse</a></li>
-                            <li class="item"><a>Plan masse 3D</a></li>
-                            <li class="item"><a>Accessibilité</a></li>
-                            <li class="item"><a>Photos environnement</a></li>
-                        </ul>
-                    </nav>
-                </div>
+    <div id="slides-perspective" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <!-- Slide One -->
+            <div class="carousel-item active" style="background-image: url('assets/bg-localisation.jpg')">
+            </div>
+            <!-- Slide Two -->
+            <div class="carousel-item" style="background-image: url('assets/bg-les-bureaux.jpg')">
+            </div>
+            <!-- Slide Three -->
+            <div class="carousel-item" style="background-image: url('assets/bg-les-services.jpg')">
             </div>
         </div>
-    </footer>-->
+        <a class="arrow-left" href="#slides-perspective" role="button" data-slide="prev">
+            <img src="assets/arrow-left.png">
+        </a>
+        <a class="arrow-right" href="#slides-perspective" role="button" data-slide="next">
+            <img src="assets/arrow-right.png">
+        </a>
+    </div>
 
     <!-- include script -->
     <script src="js/jquery-3.2.1.min.js"></script>
