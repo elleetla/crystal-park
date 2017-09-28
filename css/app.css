@@ -415,200 +415,57 @@ li{
     bottom: 0;
     left:0;
 }
-
 #bloc1, #bloc2, #bloc3, #bloc4, #bloc5{
-    height: 17vw;
-    width: 25vw;
     border-radius: 60%;
     background-color: #dddddd;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: absolute;
+    width: 25vw;
+    height: 17vw;
     overflow: hidden;
-    background-position: center;
+    font-size: 1.2vw;
+    background-size: cover;
+    letter-spacing: 3px;
+    display: inline-block;
     font-family: "GTWalsheimProRegular", Helvetica Neue, Arial, sans-serif;
-}
-
-#bloc1{
-    left: 50%;
-    right: 0;
-    bottom: 20%;
-    box-shadow: 4px -11px white, 5px -12px #cfcfcf;
-    -ms-transform: rotate(7deg) translate(-50%, 0%); /* IE 9 */
-    -webkit-transform: rotate(7deg) translate(-50%, 0%); /* Chrome, Safari, Opera */
-    transform: rotate(7deg) translate(-50%, 0%);
+    box-shadow: 4px -11px white, 5px -13px #CFCFCF;
+    text-shadow: 1px 2px 6px rgba(0,0,0,0.2);
 }
 
 #bloc2{
-    bottom: 10%;
-    left: 22%;
-    box-shadow: 4px -11px white, 5px -12px #cfcfcf;
-    -ms-transform: rotate(-28deg) translate(-50%, 0%); /* IE 9 */
-    -webkit-transform: rotate(-28deg) translate(-50%, 0%); /* Chrome, Safari, Opera */
-    transform: rotate(-28deg) translate(-50%, 0%);
-}
-
-#bloc3{
-    bottom: 10%;
-    right: 22%;
-    box-shadow: 4px -11px white, 5px -12px #cfcfcf;
-    -ms-transform: rotate(28deg) translate(50%, 0%); /* IE 9 */
-    -webkit-transform: rotate(28deg) translate(50%, 0%); /* Chrome, Safari, Opera */
-    transform: rotate(28deg) translate(50%, 0%);
-}
-
-#bloc4{
-    top: 10%;
-    left: 11%;
-    box-shadow: 4px -11px white, 5px -12px #cfcfcf;
-    -ms-transform: rotate(12deg) translate(50%, 0%); /* IE 9 */
-    -webkit-transform: rotate(12deg) translate(50%, 0%); /* Chrome, Safari, Opera */
-    transform: rotate(12deg) translate(50%, 0%);
-}
-
-#bloc5{
-    top: 10%;
-    right:11%;
-    box-shadow: 4px -11px white, 5px -12px #cfcfcf;
-    -ms-transform: rotate(12deg) translate(50%, 0%); /* IE 9 */
-    -webkit-transform: rotate(12deg) translate(50%, 0%); /* Chrome, Safari, Opera */
-    transform: rotate(-12deg) translate(-50%);
-}
-
-#bloc1:before
-{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
-    background: url(../assets/bg-les-bureaux.jpg) 0 0 repeat;
-    -webkit-transform: rotate(-7deg);
-    -moz-transform: rotate(-7deg);
-    -ms-transform: rotate(-7deg);
-    -o-transform: rotate(-7deg);
-    transform: rotate(-7deg);
-    background-size: cover;
-}
-
-#bloc2:before
-{
-    content: "";
-    position: absolute;
-    width: 115%;
-    height: 115%;
-    overflow: hidden;
-    z-index: -1;
-    background: url(../assets/bg-les-services.jpg) 0 0 repeat;
-    -webkit-transform: rotate(28deg);
-    -moz-transform: rotate(28deg);
-    -ms-transform: rotate(28deg);
-    -o-transform: rotate(28deg);
-    transform: rotate(28deg);
-    background-size: cover;
-}
-
-#bloc3:before
-{
-    content: "";
-    position: absolute;
-    width: 115%;
-    height: 115%;
-    overflow: hidden;
-    z-index: -1;
-    background: url(../assets/bg-les-services.jpg) 0 0 repeat;
-    -webkit-transform: rotate(-28deg);
     -moz-transform: rotate(-28deg);
-    -ms-transform: rotate(-28deg);
-    -o-transform: rotate(-28deg);
+    -webkit-transform: rotate(-28deg);
     transform: rotate(-28deg);
-    background-size: cover;
+    background-image: url("../assets/bg-les-bureaux.jpg");
+    bottom: 0%;
+    left: 10%;
 }
-
-#bloc4:before
-{
-    content: "";
+.inner{
+    display: inline-block;
     position: absolute;
-    width: 115%;
-    height: 115%;
-    overflow: hidden;
-    z-index: -1;
-    background: url(../assets/bg-localisation.jpg) 0 0 repeat;
-    -webkit-transform: rotate(-12deg);
-    -moz-transform: rotate(-12deg);
-    -ms-transform: rotate(-12deg);
-    -o-transform: rotate(-12deg);
-    transform: rotate(-12deg);
-    background-size: cover;
-}
-
-#bloc5:before
-{
-    content: "";
-    position: absolute;
-    width: 115%;
-    height: 115%;
-    overflow: hidden;
-    z-index: -1;
-    background: url(../assets/bg-les-services.jpg) 0 0 repeat;
-    -webkit-transform: rotate(12deg);
-    -moz-transform: rotate(12deg);
-    -ms-transform: rotate(12deg);
-    -o-transform: rotate(12deg);
-    transform: rotate(12deg);
-    background-size: cover;
-}
-
-.title-bloc {
-    height: 100%;
-    background: rgba(164,146,128,0.6);
-    color: #ffffff;
-    vertical-align: middle;
-    text-align: center;
-    font-size: 1.1vw;
-    display: block;
-    text-transform: uppercase;
-    letter-spacing: 2px;
     width: 100%;
+    left: 0;
+    top: 0;
+    text-transform: uppercase;
+    text-align: center;
     padding-top: 32%;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    height: 100%;
+    color: #FFF;
+    background: rgba(164,146,128,0.7);
 }
 
-.title-bloc{
-    transition: all 0.30s ease-in-out 0s;
-    -webkit-transition: all 0.30s ease-in-out 0s;
-    -moz-transition: all 0.30s ease-in-out 0s;
-    -o-transition: all 0.30s ease-in-out 0s;
-}
-
-#bloc1 .title-bloc{
-    transform: rotate(-7deg);
-    margin: 0 auto;
-}
-
-#bloc2 .title-bloc{
+.inner span{
     transform: rotate(28deg);
+    display: inline-block;
 }
 
-#bloc3 .title-bloc{
-    transform: rotate(-28deg);
-}
-
-#bloc4 .title-bloc{
-    transform: rotate(-12deg);
-}
-
-#bloc5 .title-bloc{
-    transform: rotate(12deg);
-}
-
-.bloc-home:hover .title-bloc{
-    background: #A49280;
-    transition: all 0.30s ease-in-out 0s;
+.inner, .inner:hover{
     -webkit-transition: all 0.30s ease-in-out 0s;
     -moz-transition: all 0.30s ease-in-out 0s;
     -o-transition: all 0.30s ease-in-out 0s;
+}
+
+.inner:hover {
+    background-color: #A49280;
 }
 
 #logo-page-home{
