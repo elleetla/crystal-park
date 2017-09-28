@@ -53,24 +53,24 @@ body{
     color: #2A4156;
 }
 
-.page-detail{
-    background: url('../assets/bg-detail.jpg') no-repeat center;
+.les-bureaux, .perspectives{
+    background: url('../assets/bg-les-bureaux.jpg') no-repeat center;
     background-size: cover;
     height: 100%;
     padding-bottom: 94px;
     font-size: 1.000em; /* équivalent à 16px */
 }
 
-.page-test1{
-    background: url('../assets/test1.jpg') no-repeat center;
+.les-services{
+    background: url('../assets/bg-les-services.jpg') no-repeat center;
     background-size: cover;
     height: 100%;
     padding-bottom: 94px;
     font-size: 1.000em; /* équivalent à 16px */
 }
 
-.page-test2{
-    background: url('../assets/test2.jpg') no-repeat center;
+.localisation, .medias{
+    background: url('../assets/bg-localisation.jpg') no-repeat center;
     background-size: cover;
     height: 100%;
     padding-bottom: 94px;
@@ -112,10 +112,11 @@ li{
 
 .nav-modal-burger {
     position: absolute;
-    left: 10%;
+    left: 14%;
     transform: translate(0, -50%);
     top: 50%;
     text-transform: uppercase;
+    font-family: "GTWalsheimProLight", Helvetica Neue, Arial, sans-serif;
 }
 
 .nav-modal-burger li a{
@@ -128,6 +129,10 @@ li{
 
 .nav-modal-burger li a:hover{
     padding-left:6px;
+}
+
+.nav-modal-burger li .active{
+    font-family: "GTWalsheimProMedium", Helvetica Neue, Arial, sans-serif;
 }
 
 .arrow-left img, .arrow-right img{
@@ -299,11 +304,12 @@ li{
 .subnav-footer ul{
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 .subnav-footer ul li{
     display: inline-block;
-    padding: 16px 0px;
+    padding: 20px 0px;
     width: 100%;
 }
 
@@ -317,6 +323,12 @@ li{
     display: block;
     cursor: pointer;
     font-size: 0.588em;
+}
+
+.medias .subnav-footer ul a{
+    display: inline-block;
+    padding: 18px 5px;
+    width: 300px;
 }
 
 .subnav-footer ul li a:hover{
@@ -538,6 +550,10 @@ li{
 
     .subnav-footer-hover {
         padding: 16px 8px;
+    }
+
+    .medias .subnav-footer ul li{
+        width: auto;
     }
 
 }

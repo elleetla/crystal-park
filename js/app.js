@@ -9,9 +9,9 @@ $('document').ready(function() {
     });
 
     // Slider carousels nav footer
-    $('.owl-carousel-one').owlCarousel({
+    $('.les-bureaux .owl-carousel').owlCarousel({
         loop:false,
-        margin:10,
+        margin:15,
         nav:false,
         responsive:{
             0:{
@@ -26,9 +26,9 @@ $('document').ready(function() {
         }
     });
 
-    $('.owl-carousel').owlCarousel({
+    $('.les-services .owl-carousel').owlCarousel({
         loop:false,
-        margin:10,
+        margin:15,
         nav:false,
         responsive:{
             0:{
@@ -38,7 +38,41 @@ $('document').ready(function() {
                 items:3
             },
             1000:{
-                items:8
+                items:7
+            }
+        }
+    });
+
+    $('.localisation .owl-carousel').owlCarousel({
+        loop:false,
+        margin:15,
+        nav:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+    });
+
+    $('.perspectives .owl-carousel').owlCarousel({
+        loop:false,
+        margin:15,
+        nav:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
             }
         }
     });
