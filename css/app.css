@@ -94,7 +94,6 @@ li{
 .arrow-left img, .arrow-right img{
     width: 60px;
     height: auto;
-    opacity: 0.8;
 }
 
 .arrow-left, .arrow-right{
@@ -131,7 +130,7 @@ li{
     right: 14px;
     top: -11px;
     cursor: pointer;
-    padding: 15px 20px;
+    padding: 19px 20px 13px 20px;
     background-color: #ffffff;
     -webkit-border-radius: 260px / 200px;
     -moz-border-radius: 260px / 200px;
@@ -160,7 +159,7 @@ li{
 /* Icon 3 */
 
 #nav-icon3{
-    width: 23px;
+    width: 22px;
     height: 16px;
     position: relative;
     -webkit-transform: rotate(0deg);
@@ -177,7 +176,7 @@ li{
 #nav-icon3 span{
     display: block;
     position: absolute;
-    height: 3px;
+    height: 2px;
     width: 100%;
     background: #71523D;
     border-radius: 80px;
@@ -198,11 +197,11 @@ li{
 }
 
 #nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
-    top: 7px;
+    top: 5px;
 }
 
 #nav-icon3 span:nth-child(4) {
-    top: 14px;
+    top: 10px;
 }
 
 #nav-icon3.open span:nth-child(1) {
@@ -444,7 +443,7 @@ li{
         position: absolute;
         right: 15px;
         top: -10px;
-        padding: 11px 14px;
+        padding: 13px 14px 9px 14px;
     }
 
     #logo-site img {
@@ -453,15 +452,15 @@ li{
     }
 
     #nav-icon3 span {
-        height: 3px;
+        height: 2px;
     }
 
     #nav-icon3 span:nth-child(2), #nav-icon3 span:nth-child(3) {
-        top: 6px;
+        top: 5px;
     }
 
     #nav-icon3 span:nth-child(4) {
-        top: 12px;
+        top: 10px;
     }
 
     #header-site {
