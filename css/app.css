@@ -7,6 +7,10 @@ html{
     font-size: 100%;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body{
     font-family: "GTWalsheimProLight", Helvetica Neue, Arial, sans-serif;
     font-size: 1.000em; /* équivalent à 16px */
@@ -82,6 +86,7 @@ li{
     position: absolute;
     left: 14%;
     transform: translate(0, -50%);
+    line-height: 30px;
     top: 50%;
     text-transform: uppercase;
     font-family: "GTWalsheimProLight", Helvetica Neue, Arial, sans-serif;
@@ -347,14 +352,15 @@ li{
 
 /* page home */
 
+#logo-page-home {
+    text-align: center;
+    z-index: 1;
+}
+
 #logo-page-home img {
     width: 20vw;
     height: auto;
     margin-bottom: 4%;
-}
-
-#logo-page-home {
-    text-align: center;
 }
 
 .description p {
