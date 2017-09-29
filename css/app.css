@@ -1,42 +1,5 @@
-/* style css */
-
-/* Font face */
-
-@font-face {
-    font-family: 'GTWalsheimProLight';
-    src: url('../fonts/gt-walsheim/light/GTWalsheimProLight.eot');
-    src: url('../fonts/gt-walsheim/light/GTWalsheimProLight.woff2') format('woff2'),
-    url('../fonts/gt-walsheim/light/GTWalsheimProLight.woff') format('woff'),
-    url('../fonts/gt-walsheim/light/GTWalsheimProLight.ttf') format('truetype'),
-    url('../fonts/gt-walsheim/light/GTWalsheimProLight.svg#GTWalsheimProLight') format('svg'),
-    url('../fonts/gt-walsheim/light/GTWalsheimProLight.eot?#iefix') format('embedded-opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'GTWalsheimProMedium';
-    src: url('../fonts/gt-walsheim/medium/GTWalsheimProMedium.eot');
-    src: url('../fonts/gt-walsheim/medium/GTWalsheimProMedium.woff2') format('woff2'),
-    url('../fonts/gt-walsheim/medium/GTWalsheimProMedium.woff') format('woff'),
-    url('../fonts/gt-walsheim/medium/GTWalsheimProMedium.ttf') format('truetype'),
-    url('../fonts/gt-walsheim/medium/GTWalsheimProMedium.svg#GTWalsheimProMedium') format('svg'),
-    url('../fonts/gt-walsheim/medium/GTWalsheimProMedium.eot?#iefix') format('embedded-opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'GTWalsheimProRegular';
-    src: url('../fonts/gt-walsheim/regular/GTWalsheimProRegular.eot');
-    src: url('../fonts/gt-walsheim/regular/GTWalsheimProRegular.woff2') format('woff2'),
-    url('../fonts/gt-walsheim/regular/GTWalsheimProRegular.woff') format('woff'),
-    url('../fonts/gt-walsheim/regular/GTWalsheimProRegular.ttf') format('truetype'),
-    url('../fonts/gt-walsheim/regular/GTWalsheimProRegular.svg#GTWalsheimProRegular') format('svg'),
-    url('../fonts/gt-walsheim/regular/GTWalsheimProRegular.eot?#iefix') format('embedded-opentype');
-    font-weight: normal;
-    font-style: normal;
-}
+/* import */
+@import "fonts.css";
 
 html{
     height: 100%;
@@ -45,44 +8,44 @@ html{
 }
 
 body{
-    background: url('../assets/bg-motif-home.png') #ffffff no-repeat center;
-    background-size: cover;
     font-family: "GTWalsheimProLight", Helvetica Neue, Arial, sans-serif;
-    height: 100%;
-    overflow: hidden;
     font-size: 1.000em; /* équivalent à 16px */
     color: #2A4156;
+}
+
+.home{
+    background: url('../assets/bg-motif-home.png') #ffffff no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+    height: 100%;
 }
 
 .les-bureaux{
     background: url('../assets/bg-les-bureaux.jpg') no-repeat center;
     background-size: cover;
     height: 100%;
-    overflow: inherit;
-    padding-bottom: 94px;
-    font-size: 1.000em; /* équivalent à 16px */
 }
 
 .les-services{
     background: url('../assets/bg-les-services.jpg') no-repeat center;
     background-size: cover;
     height: 100%;
-    overflow: inherit;
-    padding-bottom: 94px;
-    font-size: 1.000em; /* équivalent à 16px */
 }
 
-.localisation, .medias{
+.localisation{
     background: url('../assets/bg-localisation.jpg') no-repeat center;
     background-size: cover;
     height: 100%;
-    overflow: inherit;
-    padding-bottom: 94px;
-    font-size: 1.000em; /* équivalent à 16px */
 }
 
 .perspectives{
-    overflow: inherit;
+    background: #ffffff;
+}
+
+.medias{
+    background: url('../assets/bg-medias.jpg') no-repeat center;
+    background-size: cover;
+    height: 100%;
 }
 
 /* general */
@@ -106,16 +69,13 @@ li{
 }
 
 #modal-burger{
-    background-color: #C4B3A2;
     height: 100%;
     width: 100%;
     position: absolute;
     display: none;
-    background-image: url(../assets/motif-navburger.png);
-    z-index: 2;
+    background: url(../assets/motif-navburger.png) #C4B3A2 center no-repeat;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    z-index: 2;
 }
 
 .nav-modal-burger {
@@ -130,7 +90,7 @@ li{
 .nav-modal-burger li a{
     color: #ffffff;
     font-size: 1.750em;
-    padding: 18px 0;
+    padding: 20px;
     display: inline-block;
     letter-spacing: 2px;
 }
@@ -167,20 +127,20 @@ li{
 /* header */
 
 #header-site{
-    padding: 30px 15px;
+    padding: 30px;
     position: fixed;
     width: 100%;
     z-index: 3;
+    box-sizing: border-box;
     background: -moz-linear-gradient(top, rgba(97,83,63,0.55) 0%, rgba(255,255,255,0) 85%);
     background: -webkit-linear-gradient(top, rgba(97,83,63,0.55) 0%,rgba(255,255,255,0) 85%);
     background: linear-gradient(to bottom, rgba(97,83,63,0.55) 0%,rgba(255,255,255,0) 85%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61533f', endColorstr='#00ffffff',GradientType=0 )
 }
 
 .nav-burger {
     position: absolute;
-    right: 14px;
-    top: -11px;
+    right: 30px;
+    top: 20px;
     cursor: pointer;
     padding: 19px 20px 13px 20px;
     background-color: #ffffff;
@@ -300,13 +260,15 @@ li{
 
 #footer-site {
     position: fixed;
+    box-sizing: border-box;
     width: 100%;
     bottom: 0;
     background-color: #ffffff;
 }
 
-.subnav-footer{
+.subnav-footer {
     text-align: center;
+    padding: 0 15px;
 }
 
 .subnav-footer ul{
@@ -342,11 +304,12 @@ li{
 .subnav-footer ul li a:hover{
     background-color: #C4B3A2;
     border: 1px solid #C4B3A2;
-    color: #ffffff !important;
+    color: #ffffff;
 }
 
 .subnav-footer ul li a:focus{
     background-color: #C4B3A2;
+    color: #ffffff;
 }
 
 .subnav-footer-hover {
@@ -415,6 +378,7 @@ li{
     bottom: 0;
     left:0;
 }
+
 #bloc1, #bloc2, #bloc3, #bloc4, #bloc5{
     border-radius: 60%;
     background-color: #dddddd;
@@ -424,56 +388,166 @@ li{
     overflow: hidden;
     font-size: 1.2vw;
     background-size: cover;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     display: inline-block;
     font-family: "GTWalsheimProRegular", Helvetica Neue, Arial, sans-serif;
     box-shadow: 4px -11px white, 4px -12px #CFCFCF;
     text-shadow: 1px 2px 6px rgba(0,0,0,0.2);
 }
 
+/* bloc "Localisation" */
+
 #bloc1{
     -moz-transform: rotate(-18deg);
     -webkit-transform: rotate(-18deg);
     transform: rotate(-18deg);
-    background-image: url("../assets/bg-localisation.jpg");
     bottom: -14%;
     left: 12%;
 }
+
+#bloc1:before
+{
+    content: "";
+    position: absolute;
+    width: 110%;
+    top: 0;
+    left: 0%;
+    height: 110%;
+    z-index: -1;
+    background: url("../assets/bg-localisation.jpg") 0 0 no-repeat;
+    background-size: cover;
+    -moz-transform: rotate(18deg);
+    -webkit-transform: rotate(18deg);
+    transform: rotate(18deg);
+}
+
+#bloc1 .inner span{
+    transform: rotate(18deg);
+    display: inline-block;
+}
+
+/* bloc "Les services" */
 
 #bloc2{
     -moz-transform: rotate(10deg) translate(-50%);
     -webkit-transform: rotate(10deg) translate(-50%);
     transform: rotate(10deg) translate(-50%);
-    background-image: url(../assets/bg-les-services.jpg);
     bottom: 18%;
     left: 50%;
 }
+
+#bloc2:before
+{
+    content: "";
+    position: absolute;
+    width: 110%;
+    top: 0;
+    left: 0%;
+    height: 110%;
+    z-index: -1;
+    background: url("../assets/bg-les-services.jpg") center no-repeat;
+    background-size: cover;
+    -moz-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+
+#bloc2 .inner span{
+    transform: rotate(-10deg);
+    display: inline-block;
+}
+
+/* bloc "Les bureaux" */
 
 #bloc3{
     -moz-transform: rotate(18deg);
     -webkit-transform: rotate(18deg);
     transform: rotate(18deg);
-    background-image: url("../assets/bg-les-bureaux.jpg");
     bottom: -14%;
     right: 12%;
 }
+
+#bloc3:before
+{
+    content: "";
+    position: absolute;
+    width: 110%;
+    top: 0;
+    left: 0%;
+    height: 110%;
+    z-index: -1;
+    background: url("../assets/bg-les-bureaux.jpg") center no-repeat;
+    background-size: cover;
+    -moz-transform: rotate(-18deg);
+    -webkit-transform: rotate(-18deg);
+    transform: rotate(-18deg);
+}
+
+#bloc3 .inner span{
+    transform: rotate(-18deg);
+    display: inline-block;
+}
+
+/* bloc "perspectives" */
 
 #bloc4{
     -moz-transform: rotate(14deg);
     -webkit-transform: rotate(14deg);
     transform: rotate(14deg);
-    background-image: url("../assets/bg-les-bureaux.jpg");
     top: 22%;
     left: 24%;
 }
+
+#bloc4:before
+{
+    content: "";
+    position: absolute;
+    width: 110%;
+    top: 0;
+    left: 0%;
+    height: 110%;
+    z-index: -1;
+    background: url("../assets/bg-perspectives.jpg") center no-repeat;
+    background-size: cover;
+    -moz-transform: rotate(-14deg);
+    -webkit-transform: rotate(-14deg);
+    transform: rotate(-14deg);
+}
+
+#bloc4 .inner span{
+    transform: rotate(-14deg);
+    display: inline-block;
+}
+
+/* bloc "Médias" */
 
 #bloc5{
     -moz-transform: rotate(-14deg);
     -webkit-transform: rotate(-14deg);
     transform: rotate(-14deg);
-    background-image: url("../assets/bg-les-bureaux.jpg");
     top: 22%;
     right: 24%;
+}
+
+#bloc5:before
+{
+    content: "";
+    position: absolute;
+    width: 110%;
+    top: 0;
+    left: 0%;
+    height: 110%;
+    z-index: -1;
+    background: url("../assets/bg-medias.jpg") center no-repeat;
+    background-size: cover;
+    -moz-transform: rotate(14deg);
+    -webkit-transform: rotate(14deg);
+    transform: rotate(14deg);
+}
+
+#bloc5 .inner span{
+    transform: rotate(14deg);
+    display: inline-block;
 }
 
 .inner{
@@ -488,31 +562,6 @@ li{
     height: 100%;
     color: #FFF;
     background: rgba(164,146,128,0.6);
-}
-
-#bloc1 .inner span{
-    transform: rotate(18deg);
-    display: inline-block;
-}
-
-#bloc2 .inner span{
-    transform: rotate(-10deg);
-    display: inline-block;
-}
-
-#bloc3 .inner span{
-    transform: rotate(-18deg);
-    display: inline-block;
-}
-
-#bloc4 .inner span{
-    transform: rotate(-14deg);
-    display: inline-block;
-}
-
-#bloc5 .inner span{
-    transform: rotate(14deg);
-    display: inline-block;
 }
 
 .inner, .inner:hover{
@@ -530,6 +579,12 @@ li{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+/* Pge détail */
+
+.owl-carousel .owl-item:last-child{
+    margin-right: 0 !important;
 }
 
 /* Slider full width */
@@ -556,10 +611,6 @@ li{
     z-index: 3;
 }
 
-#modal-one{
-    display: none;
-}
-
 /*
     Media queries
 ----------------------------------------------*/
@@ -573,9 +624,7 @@ li{
 
 }
 
-@media (max-width: 1200px) {
-
-}
+@media (max-width: 1200px) { }
 
 @media (max-width: 1120px){
 
@@ -586,14 +635,76 @@ li{
 
 }
 
-@media (max-width: 992px) {
-
-}
+@media (max-width: 992px) { }
 
 @media (max-width: 768px) {
 
     html{
         font-size: 80%;
+    }
+
+    .home{
+        overflow: inherit;
+        background-attachment: fixed;
+        height: auto;
+    }
+
+    #logo-page-home{
+        position: relative;
+        width: 100%;
+        padding: 40px 0;
+        transform: none;
+        left: inherit;
+        top: inherit;
+        font-size: 1em;
+    }
+
+    .description p{
+        font-size: 1em;
+    }
+
+    #logo-page-home img{
+        width: 200px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .content-top, .content-bottom{
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+
+    #bloc1, #bloc2, #bloc3, #bloc4, #bloc5{
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 300px;
+        font-size: 1em;
+        display: block;
+        transform: rotate(0deg);
+        margin: 0 auto;
+        box-shadow: none;
+        margin-bottom: 30px;
+        height: 200px;
+    }
+
+    #bloc1 .inner, #bloc2 .inner, #bloc3 .inner, #bloc4 .inner, #bloc5 .inner{
+        padding: 0;
+    }
+
+    #bloc1 .inner span, #bloc2 .inner span, #bloc3 .inner span, #bloc4 .inner span, #bloc5 .inner span{
+        transform: rotate(0deg);
+        margin-top: 96px;
+        padding-top: 0;
+    }
+
+    #bloc1:before, #bloc2:before, #bloc3:before, #bloc4:before, #bloc5:before{
+        transform: rotate(0deg);
+        height: 100%;
+        width: 100%;
     }
 
 }
@@ -612,15 +723,13 @@ li{
     }
 
     .nav-burger {
-        position: absolute;
-        right: 15px;
-        top: -10px;
+        right: 25px;
+        top: 16px;
         padding: 13px 14px 9px 14px;
     }
 
     #logo-site img {
         width: 160px;
-        height: auto;
     }
 
     .subnav-footer ul a {
@@ -653,7 +762,7 @@ li{
     }
 
     #header-site {
-        padding: 25px 8px;
+        padding: 25px;
     }
 
     .nav-modal-burger li a {
@@ -662,11 +771,6 @@ li{
 
     .arrow-left img, .arrow-right img{
         width: 50px;
-    }
-
-    .subnav-footer{
-        text-align: center;
-        padding-left: 0;
     }
 
     .subnav-footer-hover li a {
