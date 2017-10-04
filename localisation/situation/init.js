@@ -1,0 +1,1 @@
+var config = { image : "plan_de_situation.jpg",crop :true,color :"#2c5775",zones : [ ]}

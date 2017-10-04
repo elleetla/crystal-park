@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Map</title>
+    <script>
+        var support = false;
+        var canvas = function() {
+            var elem = document.createElement('canvas');
+            return !!(elem.getContext && elem.getContext('2d'))
+        };
+        var svg = function() {
+            return document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1");
+        };
+        if(!canvas || !svg) {
+            document.getElementByTagName('body')[0].className += 'not-supported'
+        }
+        else {
+            support = true;
+        };
+    </script>
+
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="../../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../css/app.css">
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body class="localisation detail-page">
+
+<div id="modal-burger">
+    <ul class="nav-modal-burger">
+        <li><a class="active" href="../../localisation.html">Localisation</a></li>
+        <li><a href="../../les-services.html">Les services</a></li>
+        <li><a href="../../les-bureaux.html">Les Bureaux</a></li>
+        <li><a href="../../perspectives.html">Perspectives</a></li>
+        <li><a href="../../medias.html">Médias</a></li>
+    </ul>
+</div>
+
+<header id="header-site">
+    <div id="logo-site">
+        <a href="../../index.html">
+            <img src="../../assets/logo.png" alt="Logo Crystal Park" title="Logo Crystal Park">
+        </a>
+    </div>
+    <div class="nav-burger">
+        <div id="nav-icon3">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
+
+<div id="not-supported">
+    <div class="alert alert-danger">
+        <strong>Votre navigateur est périmé</strong>, ses fonctionnalitées ne permettent pas d'afficher les contenus interactifs de notre site internet. Contactez votre administrateur réseau ou mettez à jour votre navigateur.
+    </div>
+</div>
+<div id="canvas-wrapper">
+    <canvas id="canvas-1"></canvas>
+</div>
+
+<div id="image-map-loader" class="loader">
+    <img src="loader.svg" />
+</div>
+
+<footer id="footer-site">
+    <nav class="subnav-footer">
+        <ul class="owl-carousel owl-theme">
+            <li class="item"><a href="index.html">Situation</a></li>
+            <li class="item"><a href="localisation/plan-masse/index.html">Plan masse</a></li>
+            <li class="item"><a href="localisation/plan-masse-3D/index.html">Plan masse 3D</a></li>
+            <li class="item"><a href="localisation/accessibilite/index.html">Accessibilité</a></li>
+            <li class="item"><a href="localisation/photos-environnement/index.html">Photos environnement</a></li>
+        </ul>
+    </nav>
+</footer>
+
+<script src="init.js"></script>
+<script>
+    var loader = document.getElementById("image-map-loader");
+    loader.style.backgroundColor = config.color;
+</script>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.axeon-canvas.min.js"></script>
+<script src="../../js/owl.carousel.min.js"></script>
+<script src="../../js/app.js"></script>
+
+<script>
+    jQuery(document).ready(function($){
+        $("#image-map-loader").show();
+        var preloader = new AXEON.ImagesPreloader();
+
+        preloader.add(config.image);
+        for(var i = 0; i < config.zones.length; i++) {
+            preloader.add(config.zones[i].image);
+        }
+        preloader.on("completed", function() {
+            $("#image-map-loader").hide();
+            var nodes = [];
+            var image = preloader.cache[config.image]
+            var node = new AXEON.Image(image);
+            node.hit = false;
+            nodes.push(node);
+            for(var i = 0; i < config.zones.length; i++) {
+                var zone = new AXEON.Image(preloader.cache[config.zones[i].image]);
+                zone.x = config.zones[i].x;
+                zone.y = config.zones[i].y;
+                zone.data = config.zones[i];
+
+                zone.on("axeon.tap", function() {
+                    if(this.data.lightbox) {
+                        $("#canvas-1").data("axeon.canvas").paused = true;
+                        $("body").lightbox({
+                            url : this.data.url,
+                            crop : this.data.crop,
+                            color : config.color,
+                            color2 : AXEON.Color.luminance(config.color, 0.2)
+                        });
+                        $("body").on("close", function() {
+                            $("#canvas-1").data("axeon.canvas").paused = false;
+                        })
+                    }
+                    else {
+                        window.location = this.data.url;
+                    }
+                });
+                nodes.push(zone);
+            }
+            $("#canvas-1").canvas({
+                width : image.width,
+                height : image.height,
+                nodes : nodes,
+                responsiveCrop : config.crop,
+                color : config.color,
+                color2 : AXEON.Color.luminance(config.color, 0.2)
+            });
+        });
+        preloader.start();
+    })
+</script>
+</body>
+</html>
