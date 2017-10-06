@@ -96,3 +96,12 @@ $('document').ready(function() {
     });
 
 });
+
+var myFrame = document.getElementsByClassName('iframe-module');
+//var preLoading = document.getElementById('pre-loading');
+var urlHref = document.querySelector('.item a').attr('href');
+
+function loadPages() {
+    var linkI = urlHref;
+    myFrame.setAttribute('src', linkI);
+}

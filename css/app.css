@@ -134,6 +134,17 @@ li{
     left: 30px;
 }
 
+#pre-loading{
+    background: #ffffff;
+    position: absolute;
+    height: 100%;
+    z-index: 90;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
 /* header */
 
 #header-site{
